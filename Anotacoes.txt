@@ -1,0 +1,14 @@
+Tipo Option
+    O que acontece quando você tenta acessar uma variável não inicializada
+    ou declara com null (ausência de valores) em JS? Simplesmente, você tem 
+    essa informação, pode manipula-lá. Em Rust não é bem assim, caso você 
+    estivesse pesquisando em um array, o compilador iria te entregar o resultado
+    da busca empasulado em um tipo Option contendo ou não o valor. Dessa forma,
+    evita-se bugs.
+    
+    Option tem duas possibilidades de resultados: Some(x) e None. Para utilizar,
+    utilize o match. 
+    match known_visitor {// (8)
+        Some(x) => faça algo em caso de haver dados na option, lógica
+        None => faça algo em caso de não haver dados na option, print por exemplo
+    }
